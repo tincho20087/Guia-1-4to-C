@@ -4,44 +4,35 @@ using UnityEngine;
 
 public class NewBehaviourScript : MonoBehaviour
 {
-    public float montoAconvertir;
-    public string codmoneda;
+    public int Año;
+    public string nombreAlumno;
+    public string orientacion;
 
-    float montoconv;
-    float cotizacion;
+   
     // Start is called before the first frame update
     void Start()
     {
-        if (montoAconvertir < 1000)
+
+       if (string.IsNullOrEmpty(nombreAlumno))
         {
-            Debug.Log("El monto minimo es 1000");
+            Debug.Log("Nombre no válido");
             return;
         }
 
-        if (codmoneda == "D")
+        if (Año < 3 || Año > 5)
         {
-            cotizacion = 1134.5f;
+            Debug.Log("Error. Aún estás en el ciclo básico");
+            return;
         }
 
-        else if (codmoneda == "R")
+        if (orientacion == "G" || orientacion == "T" || orientacion == "H" || orientacion == "M" || orientacion == "D")
         {
-            cotizacion = 211.1f;
-        }
-
-        else if (codmoneda == "E")
-        {
-            cotizacion = 1397.16f;
+            Debug.Log("Muchas gracias " + nombreAlumno);
         }
         else
         {
-            Debug.Log("Opción de moneda extranjera no válida");
-            return;
+            Debug.Log("Orientación no válida");
         }
-
-
-        montoAconvertir = montoAconvertir / cotizacion;
-
-        Debug.Log("Monto convertido " + montoAconvertir);
     }
 
     // Update is called once per frame
