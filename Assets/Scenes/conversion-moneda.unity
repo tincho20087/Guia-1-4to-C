@@ -141,8 +141,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7bbee7917d49111438c824a0bcdae519, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  montoAconvertir: 1000
-  codmoneda: D
+  "A\xF1o": 0
+  nombreAlumno: 
+  orientacion: 
 --- !u!4 &485441136
 Transform:
   m_ObjectHideFlags: 0
